@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CoffeeHouse.Models.MaquinaCafe
+
+@{
     ViewData["Title"] = "Bem vindo ao Coffee Home!";
 }
 
@@ -6,32 +8,109 @@
 
 <br />
 
-<div class="container-fluid" style="width:30%">
-    <table class="table table-sm table-dark">
-        <thead>
-            <tr class="text-center">
-                <th colspan="2" scope="col" style="font-size:30px">Escolha seu café:</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-            <tr>
-                <td>Cappuccino</td>
-                <td>
-                    <a class="btn btn-secondary">Selecione</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Mocha</td>
-                <td>
-                    <a class="btn btn-secondary">Selecione</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Café com Leite</td>
-                <td>
-                    <a class="btn btn-secondary">Selecione</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+
+
+<form asp-action="Create">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <br /><br /><br />
+            <table class="table table-sm table-dark">
+                <thead>
+                    <tr class="text-center">
+                        <th colspan="3" scope="col" style="font-size:20px">Escolha seu café:</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td>R$3,50</td>
+                        <td>
+                            <label class="btn btn-secondary">
+                                <input asp-for="TipoCafe" type="radio" id="option2" value="1"> Selecione
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mocha</td>
+                        <td>R$4,00</td>
+                        <td>
+                            <label class="btn btn-secondary">
+                                <input asp-for="TipoCafe" type="radio" id="option2" value="2"> Selecione
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Café com Leite<</td>
+                        <td>R$3,00</td>
+                        <td>
+                            <label class="btn btn-secondary">
+                                <input asp-for="TipoCafe" type="radio" id="option2" value="3"> Selecione
+                            </label>
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+            <table class="table table-sm table-dark">
+                <thead>
+                    <tr class="text-center">
+                        <th colspan="2" scope="col" style="font-size:20px">Escolha as moedas</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>R$0,01</td>
+                        <td>
+                            <input asp-for="UmCentavo" type="number" value="0" /><br />
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R$0,05</td>
+                        <td>
+                            <input asp-for="CincoCentavo" type="number" name="CincoCent" value="0" />
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R$0,10</td>
+                        <td>
+                            <input asp-for="DezCentavo" type="number" name="DezCent" value="0" />
+                            <span asp-validation-for="DezCentavo" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R$0,25</td>
+                        <td>
+                            <input asp-for="VinteCincoCentavo" type="number" name="VinteCincoCent" value="0" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R$0,50</td>
+                        <td>
+                            <input asp-for="CinquentaCentavo" type="number" name="CinquentaCent" value="0" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>R$1,00</td>
+                        <td>
+                            <input asp-for="UmReal" type="number" name="UmReal" value="0" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" class="btn btn-success btn-lg btn-block text-center" value="Comprar" />
+    </div>
+</form>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

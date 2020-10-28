@@ -31,3 +31,4 @@ C:\projetos\CoffeeHouse\CoffeeHouse\obj\Debug\netcoreapp2.2\CoffeeHouse.dll
 C:\projetos\CoffeeHouse\CoffeeHouse\obj\Debug\netcoreapp2.2\CoffeeHouse.pdb
 C:\projetos\CoffeeHouse\CoffeeHouse\obj\Debug\netcoreapp2.2\CoffeeHouse.genruntimeconfig.cache
 C:\projetos\CoffeeHouse\CoffeeHouse\obj\Debug\netcoreapp2.2\CoffeeHouse.csproj.CopyComplete
+C:\projetos\CoffeeHouse\CoffeeHouse\obj\Debug\netcoreapp2.2\Razor\Views\MaquinaCafes\Create.cshtml.g.cs
