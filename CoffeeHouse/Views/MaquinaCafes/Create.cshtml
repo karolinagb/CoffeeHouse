@@ -1,12 +1,15 @@
 ﻿@model CoffeeHouse.Models.MaquinaCafe
-
 <!--<div asp-validation-summary="All" class="text-danger"></div>-->
 <div class="alert alert-success" role="alert">
     <h4 class="alert-heading">Café escolhido: @Model.Descricao</h4>
     <p>Valor do item: R$ @Model.ValorCafe</p>
     <p>Valor pago: R$ @Model.ValorAceito </p>
     <hr>
-    <p class="mb-0">Troco: @Model.Troco</p>
+    <p class="mb-0">Troco: R$ @Model.Troco</p>
 </div>
-<br/>
-<a asp-action="Index" class="btn btn-default">Voltar a página anterior</>
+<br />
+<a asp-action="Index" class="btn btn-default">Voltar a página anterior</a>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
