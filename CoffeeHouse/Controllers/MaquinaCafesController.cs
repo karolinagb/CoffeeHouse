@@ -48,7 +48,7 @@ namespace CoffeeHouse.Controllers
             double cinquentaCentavo = maquinaCafe.CinquentaCentavo * 0.5;
             double umReal = maquinaCafe.UmReal * 1.0;
 
-            if (maquinaCafe.UmCentavo == 1 || maquinaCafe.CincoCentavo == 1)
+            if (maquinaCafe.UmCentavo > 0 || maquinaCafe.CincoCentavo > 0)
             {
                 return RedirectToAction(nameof(DefeitoLeitora));
             }
