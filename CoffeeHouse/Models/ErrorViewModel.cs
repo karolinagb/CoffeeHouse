@@ -1,6 +1,6 @@
 using System;
 
-namespace CoffeeHouse.Models
+namespace CoffeeHouse
 {
     public class ErrorViewModel
     {

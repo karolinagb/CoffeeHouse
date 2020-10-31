@@ -1,18 +1,14 @@
 ﻿@model CoffeeHouse.Models.MaquinaCafe
 
-<table class="table table-striped table-hover">
-    <!--thead define o cabeçalho da tabela:
-        sucess = muda a cor da barra de título--->
-    <thead class="success">
-        <!--tr é a linha-->
-        <tr>
-            <!--th é a coluna-->
-            <th>
-                <!--html displaynamefor pega o nome da clase que eu estou usando através da expressão lambda:-->
-                @Html.DisplayFor(model => model.UmCentavo)
-                @Html.DisplayFor(model => model.TipoCafe)
-            </th>
-           
-            <th></th>
-        </tr>
-    </thead>
+<!--<div asp-validation-summary="All" class="text-danger"></div>-->
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Café escolhido: @Model.Descricao</h4>
+    <p>Valor do item: R$ @Model.ValorCafe</p>
+    <p>Valor pago: R$ @Model.ValorAceito </p>
+    <hr>
+    <p class="mb-0">Troco: @Model.Troco</p>
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

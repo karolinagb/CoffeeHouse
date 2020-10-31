@@ -47,12 +47,13 @@
                             <label class="btn btn-secondary">
                                 <input asp-for="TipoCafe" type="radio" id="option2" value="3"> Selecione
                             </label>
-                           
+
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
 
         <div class="col-md-6">
             <table class="table table-sm table-dark">
@@ -65,40 +66,39 @@
                     <tr>
                         <td>R$0,01</td>
                         <td>
-                            <input asp-for="UmCentavo" type="number" value="0" /><br />
-                            
+                                <input asp-for="UmCentavo" type="number" value="0" /><br />
                         </td>
                     </tr>
                     <tr>
                         <td>R$0,05</td>
                         <td>
-                            <input asp-for="CincoCentavo" type="number" name="CincoCent" value="0" />
-                            
+                            <input asp-for="CincoCentavo" type="number" value="0" />
+
                         </td>
                     </tr>
                     <tr>
                         <td>R$0,10</td>
                         <td>
-                            <input asp-for="DezCentavo" type="number" name="DezCent" value="0" />
-                            <span asp-validation-for="DezCentavo" class="text-danger"></span>
+                            <input asp-for="DezCentavo" type="number" value="0" />
+
                         </td>
                     </tr>
                     <tr>
                         <td>R$0,25</td>
                         <td>
-                            <input asp-for="VinteCincoCentavo" type="number" name="VinteCincoCent" value="0" />
+                            <input asp-for="VinteCincoCentavo" type="number" value="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>R$0,50</td>
                         <td>
-                            <input asp-for="CinquentaCentavo" type="number" name="CinquentaCent" value="0" />
+                            <input asp-for="CinquentaCentavo" type="number" value="0" />
                         </td>
                     </tr>
                     <tr>
                         <td>R$1,00</td>
                         <td>
-                            <input asp-for="UmReal" type="number" name="UmReal" value="0" />
+                            <input asp-for="UmReal" type="number" value="0" />
                         </td>
                     </tr>
                 </tbody>
@@ -109,6 +109,7 @@
     <div>
         <input type="submit" class="btn btn-success btn-lg btn-block text-center" value="Comprar" />
     </div>
+
 </form>
 
 @section Scripts{
